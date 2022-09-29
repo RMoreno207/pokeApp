@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Details from "./Details";
+import Pokedex from "./Pokedex";
 
-describe("Details", () => {
+describe("Pokedex", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Details />);
+    const wrapper = shallow(<Pokedex />);
     expect(wrapper).toMatchSnapshot();
   });
 });
