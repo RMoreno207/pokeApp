@@ -9,12 +9,12 @@ import Footer from './components/Footer/Footer';
 
 
 function App() {
-  const [pokemon, setPokemon] = useState([{ name: "picachu" }]);
+  const [pokemones, setPokemones] = useState([]);//Guardar pokemons
 
 
   const data = {
-    pokemon,
-    setPokemon
+    pokemones,
+    setPokemones
   };
 
   return (
