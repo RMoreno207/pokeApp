@@ -9,7 +9,8 @@ import Footer from './components/Footer/Footer';
 
 
 function App() {
-  const [pokemon, setPokemon] = useState([]);
+  const [pokemon, setPokemon] = useState([{ name: "picachu" }]);
+
 
   const data = {
     pokemon,
