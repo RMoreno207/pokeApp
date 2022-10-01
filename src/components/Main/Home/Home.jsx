@@ -6,6 +6,7 @@ import "./Home.css";
 import Pokedex from './Pokedex/Pokedex';
 import axios from 'axios';
 
+
 const Home = () => {
   const [search, setSearch] = useState("");//Almacenar el pokemon a buscar
   const { pokemones, setPokemones } = useContext(pokeContext);//Array de pokemons recogidas de pokeContext

@@ -8,6 +8,7 @@ const Pokedex = (props) => {
 
   return (
     <div className="pokedex">
+      <h1>Pokedex</h1>
       {pokemones.map((pokemon, i) => <Cards value={pokemon} key={uuidv4()} index={i} />)}
     </div>
   )
