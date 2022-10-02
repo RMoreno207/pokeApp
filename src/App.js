@@ -10,11 +10,19 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [pokemones, setPokemones] = useState([]);//Guardar pokemons
-
+  const [pokeList, setPokeList] = useState([]);//Para guardar el fetch de todos los pokemon
+  const [home, setHome] = useState(false);//Para saber si viene de home
+  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10");//Para poder usar paginacion
 
   const data = {
     pokemones,
-    setPokemones
+    setPokemones,
+    pokeList,
+    setPokeList,
+    home,
+    setHome,
+    url,
+    setUrl
   };
 
   return (

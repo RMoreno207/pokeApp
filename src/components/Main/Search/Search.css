@@ -1,0 +1,51 @@
+.user {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+.formCreate fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+.user input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+
+
+/*buttons*/
+.user button {
+    width: 100px;
+    background: #a8a8a8;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+.user button:hover,
+.user button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}

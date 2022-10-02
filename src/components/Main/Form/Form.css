@@ -22,7 +22,8 @@
 }
 
 /*inputs*/
-.formCreate input {
+.formCreate input,
+.formCreate select {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
