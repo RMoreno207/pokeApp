@@ -7,7 +7,6 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 
-
 function App() {
   const [pokemones, setPokemones] = useState([]);//Guardar pokemons
   const [pokeList, setPokeList] = useState([]);//Para guardar el fetch de todos los pokemon

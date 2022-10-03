@@ -10,8 +10,7 @@ const Form = () => {
   console.log(pokemones);
 
   const onSubmit = async (data) => {
-    console.log("Estas en form");
-    console.log(data);
+
     const newPoke = {
       id: data.id,
       name: data.name,
@@ -19,9 +18,7 @@ const Form = () => {
       type: data.type1,
       type2: data.type2
     }
-    console.log(newPoke);
     setPokemones([newPoke, ...pokemones])
-    console.log(pokemones);
   }
 
   return (
@@ -43,17 +40,17 @@ const Form = () => {
             <p>{errors.id?.message}</p>
           </div>
           <div>
-            <label id="id">Nombre</label>
+            <label id="name">Nombre</label>
             <input
               id="outlined-basic"
               label="name"
               variant="outlined"
-              {...register("name", { required: true, minLength: { value: 3, message: "Pokemon's name must be 3 long at least." } })}
+              {...register("name", { required: true, minLength: { value: 2, message: "El nombre del nuevo Pokemon debe ser mayor de 2 caracteres." } })}
               type="text"
               name="name"
               placeholder="Rokamon"
             />
-            <p>{errors.id?.message}</p>
+            <p>{errors.name?.message}</p>
           </div>
 
           <div>
@@ -101,7 +98,7 @@ const Form = () => {
           </div>
 
           <div>
-            <label id="type1">Tipo 2</label>
+            <label id="type2">Tipo 2</label>
             <select
               labelId="type2"
               id="type2"

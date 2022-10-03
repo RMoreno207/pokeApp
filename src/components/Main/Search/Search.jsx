@@ -13,9 +13,7 @@ const Search = () => {
   const [deboSearch] = useDebounce(search, 2000);//Para retardar el fetch
   const { home, setHome } = useContext(pokeContext);
   setHome(false);
-  console.log("home", home);
-  console.log(search, "search");//Si 2 
-  console.log(pokemones, "Pokemones");
+
 
   //Controlador de entrada en el input
   const inputHandler = (e) => {
@@ -24,10 +22,9 @@ const Search = () => {
     setSearch(pokeToSearch);
   }
 
-  //
+
   const getPokemon = async () => {
     try {
-      console.log("Has entrado en getPokemon con ", search);
       const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${search}`);
       //Guardamos en un nuevo objeto los valores que nos interesan
       const newPoke = {
@@ -36,25 +33,21 @@ const Search = () => {
         img: data.sprites.front_default,
         type: data.types[0].type.name,
       }
-      console.log(newPoke);
+
       setPokemones([newPoke, ...pokemones]);//Concatenamos el objeto del nuevo pokemon con los existentes
+
     } catch (error) {
       console.log(error);
     }
-    // setSearch("")// limpiamos el search
   }
 
   useEffect(() => {
     if (search.length > 0) { // si el input está vacío no busca
-      console.log("useEffect", search);
-
       getPokemon()//Lanzamos la busqueda de esa entrada
-
-      console.log("getPokemon", search);
     }
   },
     [deboSearch]
-  ); //componentDidUpdate. didMount
+  );
 
 
   return (

@@ -3,18 +3,21 @@ import { pokeContext } from "../../../context/pokeContext";
 import { Link } from 'react-router-dom';
 import "./Card.css";
 
+
 const Card = (props) => {
-  const { home } = useContext(pokeContext)
-  console.log(props);
+  const { home } = useContext(pokeContext)//Para saber si cargar if o else
+
   if (home) {
     const name = props.value.name.toUpperCase();
-
 
     return <article className="card">
       <hr />
       <h2>{name}</h2>
     </article>;
-  } else {
+  }
+
+
+  else {
     const name = props.value.name.toUpperCase();
     const type = props.value.type;
     const type2 = props.value.type2;
@@ -32,5 +35,5 @@ const Card = (props) => {
   }
 };
 
-export default Card;
 
+export default Card;
