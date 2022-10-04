@@ -18,7 +18,6 @@ const Search = () => {
   //Controlador de entrada en el input
   const inputHandler = (e) => {
     const pokeToSearch = e.target.value.toLowerCase();
-    console.log("inputHandler ", pokeToSearch);//si 1
     setSearch(pokeToSearch);
   }
 

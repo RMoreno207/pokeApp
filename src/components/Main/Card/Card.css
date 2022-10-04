@@ -18,3 +18,7 @@ button:focus {
 .card img {
     width: 150px;
 }
+
+.card a {
+    color: black;
+}
