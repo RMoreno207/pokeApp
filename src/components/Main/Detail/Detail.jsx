@@ -39,7 +39,7 @@ function Detail(props) {
       <div>
         <h2>Habilidades:</h2>
         <ul>
-          {pokemon.abilities.map(ability => <li>{ability.ability.name}</li>)}
+          {/* {pokemon.abilities.map(ability => <li>{ability.ability.name}</li>)} */}
         </ul>
       </div>
 
@@ -53,7 +53,7 @@ function Detail(props) {
       <div>
         <h2>Todos sus movimientos:</h2>
         <ul>
-          {pokemon.moves.map(move => <li>{move.move.name}</li>)}
+          {/* {pokemon.moves.map(move => <li>{move.move.name}</li>)} */}
         </ul>
       </div>
 
