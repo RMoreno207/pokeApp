@@ -45,7 +45,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Welcome to the best Pokemon APP!!</h1>
       <div className="user">
         <h2>Listado de todos los Pokemon existentes</h2>
         <section>

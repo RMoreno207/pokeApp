@@ -21,16 +21,16 @@ const Card = (props) => {
     const id = props.value.id;
     const name = props.value.name.toUpperCase();
     const type = props.value.type;
-    const type2 = props.value.type2;
+    // const type2 = props.value.type2;
     const upper = type[0].toUpperCase() + type.substring(1);
     const img = props.value.img;
 
     return <article className="card">
       <hr />
+      <h2>ID: {id}</h2>
       <img src={img} alt="Pokemon" />
       <h2><Link to={`/pokemon/${id}`}>{name}</Link></h2>
       <h2>Tipo: {upper}</h2>
-      <h2>Tipo 2: {type2}</h2>
       <button variant="contained" value="Borrar" onClick={props.delete}>Borrar</button>
     </article>;
   }

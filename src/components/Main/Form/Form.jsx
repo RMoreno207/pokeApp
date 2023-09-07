@@ -3,11 +3,16 @@ import { useState, useEffect, useContext } from 'react';
 import "./Form.css";
 import { useForm } from 'react-hook-form';
 import { pokeContext } from "../../../context/pokeContext";
+import { useNavigate } from 'react-router-dom';
+
 
 const Form = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const { pokemones, setPokemones } = useContext(pokeContext);//Array de pokemons recogidas de pokeContext
   console.log(pokemones);
+
+  const navigate = useNavigate();
+
 
   const onSubmit = async (data) => {
 
@@ -16,14 +21,17 @@ const Form = () => {
       name: data.name,
       img: data.img,
       type: data.type1,
-      type2: data.type2
+      // type2: data.type2
     }
-    setPokemones([newPoke, ...pokemones])
+    setPokemones([newPoke, ...pokemones]);
+
+    navigate('/search');
+
   }
 
   return (
     <section className="formCreate">
-      <h1>Registra un nuevo Pokemon!!</h1>
+      <h1>¡Registra un nuevo Pokemon!</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <div>
@@ -97,7 +105,7 @@ const Form = () => {
             <p>{errors.type1?.message}</p>
           </div>
 
-          <div>
+          {/* <div>
             <label id="type2">Tipo 2</label>
             <select
               labelId="type2"
@@ -124,11 +132,11 @@ const Form = () => {
               <option value="Steel">Steel</option>
               <option value="Water">Water</option> </select>
             <p>{errors.type2?.message}</p>
-          </div>
+          </div> */}
 
 
           <div>
-            <button type="submit">Create</button>
+            <button type="submit">Crear</button>
           </div>
         </fieldset>
       </form>

@@ -51,9 +51,8 @@ const Search = () => {
 
   return (
     <div>
-      <h1>Welcome to the best Pokemon APP!!</h1>
       <div className="user">
-        <h2>Introduce el nombre de un Pokemon</h2>
+        <h2>¡Introduce el nombre de un Pokemon y espera!</h2>
         <input type="text" placeholder="Pikachu" onChange={inputHandler} />
         <section>
           <Pokedex />
