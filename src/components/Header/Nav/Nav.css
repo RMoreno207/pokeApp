@@ -5,6 +5,14 @@
     background-color: #FF0000;
     color: white;
     font-size: 12px;
+    padding-left: 30%;
+    padding-right: 30%;
+
+}
+
+a{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
