@@ -10,6 +10,7 @@ import axios from 'axios';
 const Search = () => {
   const [search, setSearch] = useState("");//Almacenar el pokemon a buscar
   const { pokemones, setPokemones } = useContext(pokeContext);//Array de pokemons recogidas de pokeContext
+  const {currentIndex, setCurrentIndex}= useContext(pokeContext);
   const [deboSearch] = useDebounce(search, 2000);//Para retardar el fetch
   const { home, setHome } = useContext(pokeContext);
   setHome(false);
@@ -21,9 +22,15 @@ const Search = () => {
     setSearch(pokeToSearch);
   }
 
+const nextIndex=()=>{
+    setCurrentIndex(pokemones.length);
+
+}
 
   const getPokemon = async () => {
+    
     try {
+      
       const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${search}`);
       //Guardamos en un nuevo objeto los valores que nos interesan
       const newPoke = {
@@ -33,8 +40,9 @@ const Search = () => {
         type: data.types[0].type.name,
       }
 
-      setPokemones([newPoke, ...pokemones]);//Concatenamos el objeto del nuevo pokemon con los existentes
-
+      setPokemones([...pokemones, newPoke]);//Concatenamos el objeto del nuevo pokemon con los existentes
+      nextIndex();
+      console.log(pokemones);
     } catch (error) {
       console.log(error);
     }

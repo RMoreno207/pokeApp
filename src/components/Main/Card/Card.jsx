@@ -18,6 +18,7 @@ const Card = (props) => {
 
 
   else {
+    console.log("props",props);
     const id = props.value.id;
     const name = props.value.name.toUpperCase();
     const type = props.value.type;
@@ -26,12 +27,14 @@ const Card = (props) => {
     const img = props.value.img;
 
     return <article className="card">
-      <hr />
-      <h2>ID: {id}</h2>
+      <h4>ID: {id}</h4>
       <img src={img} alt="Pokemon" />
-      <h2><Link to={`/pokemon/${id}`}>{name}</Link></h2>
-      <h2>Tipo: {upper}</h2>
+      <h4><Link to={`/pokemon/${id}`}>{name}</Link></h4>
+      <h4>Tipo: {upper}</h4>
       <button variant="contained" value="Borrar" onClick={props.delete}>Borrar</button>
+      <button variant="contained" value="Back" onClick={props.back}>Anterior</button>
+      <button variant="contained" value="Next" onClick={props.next}>Siguiente</button>
+      
     </article>;
   }
 };

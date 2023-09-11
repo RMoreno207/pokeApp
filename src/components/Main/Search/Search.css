@@ -17,17 +17,25 @@
     display: none;
 }
 
+h2{
+    font-size: 12px;
+    padding-top: 170px;
+
+}
+
+
 /*inputs*/
 .user input {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 10px;
-    width: 100%;
+    margin-left: 10px;
+    width: 250px;
     box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
+    font-family: 'pokemon', sans-serif;
+        color: #2C3E50;
+    font-size: 10px;
 }
 
 

@@ -6,3 +6,20 @@ main{
     width: 395px;
 
 }
+
+@media(min-width: 500px) {
+    .user{
+      height: 675px;
+    }
+    /* .pokedex{
+        height: 675px;
+    } */
+    .pokedex h1{
+        margin-top: 80px;
+        margin-left: 130px;
+        font-size: 20px;
+    }
+    .user button{
+margin-bottom: 18px;
+    }
+}
