@@ -1,4 +1,4 @@
-.user {
+/* .user {
     background: white;
     border: 0 none;
     border-radius: 3px;
@@ -8,14 +8,21 @@
     width: 80%;
     margin: 0 10%;
 
-    /*stacking fieldsets above each other*/
+    /*stacking fieldsets above each other
     position: relative;
-}
+} */
 
 /*Hide all except first fieldset*/
 .formCreate fieldset:not(:first-of-type) {
     display: none;
 }
+
+h2{
+    font-size: 12px;
+    padding-top: 170px;
+
+}
+
 
 /*inputs*/
 .user input {
@@ -23,17 +30,18 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 10px;
-    width: 100%;
+    margin-left: 10px;
+    width: 250px;
     box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
+    font-family: 'pokemon', sans-serif;
+        color: #2C3E50;
+    font-size: 10px;
 }
 
 
 
 /*buttons*/
-.user button {
+/* .user button {
     width: 100px;
     background: #a8a8a8;
     font-weight: bold;
@@ -48,4 +56,4 @@
 .user button:hover,
 .user button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
+} */

@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 const Form = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const { pokemones, setPokemones } = useContext(pokeContext);//Array de pokemons recogidas de pokeContext
+  const {currentIndex, setCurrentIndex}= useContext(pokeContext);
+
   console.log(pokemones);
 
   const navigate = useNavigate();
@@ -23,8 +25,8 @@ const Form = () => {
       type: data.type1,
       // type2: data.type2
     }
-    setPokemones([newPoke, ...pokemones]);
-
+    setPokemones([...pokemones, newPoke]);
+    setCurrentIndex(pokemones.length);
     navigate('/search');
 
   }

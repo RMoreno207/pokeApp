@@ -2,18 +2,34 @@
     width: 100%;
 }
 
+h1{
+    margin-top: 100px;
+    margin-left: 110px;
+    padding-bottom: 35px;
+}
+
+
+
 .user {
-    background: white;
-    border: 0 none;
-    border-radius: 3px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background-image: url('../../../../public/images/pokedex.png');
+    background-repeat: no-repeat;
+    background-size: 99% 100%;
+    border-radius: 20px;
+  
+    /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
     padding: 20px 30px;
     box-sizing: border-box;
-    width: 80%;
-    margin: 0 10%;
+    width: 92%;
+    height: 715px;
+    margin: auto;
 
     /*stacking fieldsets above each other*/
     position: relative;
+}
+
+.pokedex{
+    width: 70%;
+    margin: auto;
 }
 
 /*Hide all except first fieldset*/
@@ -38,15 +54,19 @@
 
 /*buttons*/
 .user button {
-    width: 100px;
-    background: #a8a8a8;
-    font-weight: bold;
+    width: 60px;
+    background: #2bb43b;
+    /* font-weight: bold; */
     color: white;
     border: 0 none;
     border-radius: 1px;
     cursor: pointer;
     padding: 10px 5px;
-    margin: 10px 5px;
+    margin-top: 38px;
+    margin-right: 30px;
+    font-family: 'pokemon', sans-serif;
+    font-size: 6px;
+    text-transform: uppercase;
 }
 
 .user button:hover,

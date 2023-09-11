@@ -22,3 +22,19 @@ button:focus {
 .card a {
     color: black;
 }
+
+.card h4{
+    margin: 0;
+
+}
+.card button{
+margin: 1px;
+margin-top: 10px;
+}
+
+
+@media(min-width: 500px) {
+    .card img {
+        width: 120px;
+    }
+}

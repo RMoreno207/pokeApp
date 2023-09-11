@@ -7,7 +7,7 @@ const Nav = () => {
     <nav className={"nav-bar"}>
       <Link to="/">Listado</Link>
       <Link to="/search">Buscar</Link>
-      <Link to="/new">Crear un Pokemon</Link>
+      <Link to="/new">Crear</Link>
       
     </nav>
   )

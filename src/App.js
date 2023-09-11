@@ -14,6 +14,7 @@ function App() {
   const [url, setUrl] = useState(
     "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10"
   ); //Para poder usar paginacion
+  const [currentIndex, setCurrentIndex] = useState(-1);
 
   const data = {
     pokemones,
@@ -24,6 +25,8 @@ function App() {
     setHome,
     url,
     setUrl,
+    currentIndex,
+    setCurrentIndex,
   };
 
   return (

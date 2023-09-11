@@ -5,10 +5,11 @@ import Form from './Form/Form';
 import NotFound from '../NotFound/NotFound';
 import Detail from './Detail';
 import Search from './Search/Search';
+import './Main.css';
 
 const Main = () => {
   return (
-    <main className="main">
+    <main>
       <Routes>
         <Route element={<Home />} path={"/"} />
         <Route element={<Form />} path={"/new"} />

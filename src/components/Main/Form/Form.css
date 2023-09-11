@@ -2,6 +2,11 @@
     width: 100%;
 }
 
+.formCreate h1{
+    margin-top: 10px;
+    margin: 0;
+}
+
 .formCreate fieldset {
     background: white;
     border: 0 none;
@@ -50,7 +55,7 @@
 /*buttons*/
 .formCreate button {
     width: 100px;
-    background: #a8a8a8;
+    background: #2bb43b;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -58,6 +63,10 @@
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 5px;
+    font-family: 'pokemon', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+
 }
 
 .formCreate button:hover,
