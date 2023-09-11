@@ -71,9 +71,11 @@ const Form = () => {
               label="img"
               {...register("img", { required: true })}
               name="img">
-              <option value="https://www.nintenderos.com/wp-content/uploads/2020/01/temtem.jpg">1</option>
-              <option value="https://www.kotaku.com.au/wp-content/uploads/sites/3/2020/04/fake-pokemon-whale.jpg?quality=80&w=1280">2</option>
-              <option value="https://www.clipartmax.com/png/middle/171-1711346_fake-pokemon-png.png">3</option>
+              <option value="/images/1.png">1</option>
+              <option value="/images/2.png">2</option>
+              <option value="/images/3.png">3</option>
+              <option value="/images/4.png">4</option>
+              <option value="/images/5.png">5</option>
             </select>
             <p>{errors.img?.message}</p>
           </div>
