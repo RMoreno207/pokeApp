@@ -7,7 +7,7 @@ button {
     border-radius: 1px;
     cursor: pointer;
     padding: 10px 5px;
-    margin: 10px 5px;
+    margin: 35px 5px;
 }
 
 button:hover,
@@ -16,7 +16,8 @@ button:focus {
 }
 
 .card img {
-    width: 150px;
+    width: 130px;
+    transform: scale(1.5);
 }
 
 .card a {
@@ -25,6 +26,7 @@ button:focus {
 
 .card h4{
     margin: 0;
+    font-size: 10px;
 
 }
 .card button{

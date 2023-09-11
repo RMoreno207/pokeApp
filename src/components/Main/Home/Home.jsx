@@ -16,7 +16,7 @@ const Home = () => {
 
   const getPokemon = async () => {
     try {
-      const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=6");
+      const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=5");
       const next = data.next;//Siguiente paginacion de 10
       setUrl(next);//Hook para almacenar la siguiente paginacion
       setPokeList(data.results);
